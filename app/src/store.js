@@ -33,7 +33,7 @@ const initialState = {
       blue: '#0000a8',
       background: '#00a8a8',
       text: '#000b0b',
-      // textSecondary: '#a8a8a8',
+      sectionTitleBackground: '#a8a8a8',
       textSecondary: '#f7f7fa',
       textDisabled: '#8ea8a8'
     },
