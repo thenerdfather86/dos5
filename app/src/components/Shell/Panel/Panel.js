@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStore } from './../../../store'
-import {ContentPane} from './'
+import { ContentPane } from './'
 
 
 export const Panel = props => {
@@ -14,7 +14,7 @@ export const Panel = props => {
   `
 
   const SectionHeader = styled.div`
-    background: ${props.active ? colors.blue : colors.textSecondary};
+    background: ${props.active ? colors.blue : colors.sectionTitleBackground};
     color: ${props.active ? colors.white : colors.black};
     width: 100%;
     height: 1.5em;
