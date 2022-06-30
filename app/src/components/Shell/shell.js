@@ -27,7 +27,7 @@ const AboutDialog = props => {
       <DialogLine>Copyright (C) Microsoft Corporation 1991</DialogLine>
       <DialogLine />
       <DialogLine>Copyright (C) Justin Fisher 2022</DialogLine>
-      <DialogLine><a href='https://getjustin.ca' target='_blank'>getjustin.ca</a></DialogLine>
+      <DialogLine><a href='https://getjustin.ca' target='_blank' rel="noopener noreferrer">getjustin.ca</a></DialogLine>
       <DialogButton onClick={() => toggleDialog(false)}>_Close</DialogButton>
     </Dialog>
 }
