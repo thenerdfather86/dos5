@@ -47,8 +47,6 @@ export const Dialog = props => {
     z-index: 1510;
   `
 
-  console.log(props.open)
-
   return <Container>
       <DialogTitle>{props.title}</DialogTitle>
       <Dialog open={props.open} onClose={props.onClose}>

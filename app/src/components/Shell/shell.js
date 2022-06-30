@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStore } from './../../store'
-import { Menubar, Footer, Panel, Dialog, DialogLine, DialogButton } from './'
+import { Menubar, Footer, Panel, Dialog, DialogLine, DialogButton, DirTree } from './'
 
 // White: #fcfcfc
 // Disabled: #8ea8a8
@@ -16,8 +16,6 @@ const AboutDialog = props => {
   const toggleDialog = newState => {
     dispatch({type: 'toggle_dialog', dialog: 'about', newState: newState})
   }
-
-  console.log(isVisible)
 
   return <Dialog
     title="About Shell"
@@ -72,36 +70,12 @@ const Drives = props => {
   }
 
   return <Container>
-    <Line>{currentDrive}:\{currentFolder}</Line>
+    <Line>{currentDrive}{currentFolder}</Line>
     <Line>
       <Drive letter="A" />
       <Drive letter="B" />
       <Drive letter="C" />
     </Line>
-  </Container>
-}
-
-const DirTree = props => {
-  const [state, dispatch] = useStore()
-  const { currentFolder, folders } = state.dos
-
-  const Container = styled.div`
-    display: flex;
-  `
-
-  const Line = props => {
-    const StyledLine = styled.div`
-      position: relative;
-      left: calc(${props.indent} * 1.5em);
-    `
-
-    return <StyledLine>
-      [-]{props.children}
-    </StyledLine>
-  }
-
-  return <Container>
-    <Line>Tree</Line>
   </Container>
 }
 
@@ -151,7 +125,7 @@ export const Shell = props => {
       </Panel>
       <Panel
         gridArea="pane3"
-        title={`${currentDrive}:\\${!currentFolder ? currentFolder : currentFolder + '\\'}`}>
+        title={`${currentDrive}${currentFolder}\\*.*`}>
       </Panel>
       <Panel
         gridArea="pane4"
