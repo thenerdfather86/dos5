@@ -43,7 +43,7 @@ export const Clock = () => {
         format = format.replace(/(^|[^\\])HH+/g, "$1" + ii(H));
         format = format.replace(/(^|[^\\])H/g, "$1" + H);
 
-        var h = H > 12 ? H - 12 : H == 0 ? 12 : H;
+        var h = H > 12 ? H - 12 : H === 0 ? 12 : H;
         format = format.replace(/(^|[^\\])hh+/g, "$1" + ii(h));
         format = format.replace(/(^|[^\\])h/g, "$1" + h);
 
